@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResultOfLove</title>
+    <link href="/Web_Develpoment/Love_Calculator/static/style2.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+        }
+
+        .heart{
+            animation: beat 1s infinite;
+            height: 240px;
+            width: 240px;
+            justify-content: center;
+            margin-left: 630px;
+        }
+        
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .Res{
+            font-size: 50px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #LastPart{
+            background-color: #FF5E5B;
+        }
+        
+        #Disclaimer{
+            margin: 15px;
+            font-size: 30px;
+            margin-top: 80px;
+            color: #D8D8D8;
+        }
+    </style>
+</head>
+<body>
+    <div id="MainBody">
+        <div id="Result">
+            <div id="heart">
+                <img src="{{ url_for('static', filename='images/HeartShape.png') }}" alt="Beating Heart" class="heart">
+            </div>
+             <p class="Res"><b>Percentage : </b> {{percentage}}</p>
+             <p class="Res"><b>Result : </b> {{result}}</p>
+        </div>
+        <div id="LastPart">
+            <p id="Disclaimer"><b><u>Disclaimer</u> : </b>This Love Calculator is designed purely for entertainment purposes. Please do not take the results seriously or make decisions based on them. Remember, true love and relationships are built on mutual respect, understanding, and genuine connection—something no calculator can measure. Believe in yourself and trust your own feelings and experiences.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveCalculator</title>
+    <link href="/Web_Develpoment/Love_Calculator/static/style.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+        }
+        
+        .FirstPart{
+            background-color: pink;
+            color: blueviolet;
+            text-align: center;
+            font-size: 70px;
+            height: 120px;
+            display: inline-flex;
+            width: 100%;
+            text-align: center;
+        }
+
+        .heart-HeartContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heart{
+            animation: beat 1s infinite;
+            height: 120px;
+            width: 120px;
+        }
+        
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        
+        #Heading{
+            margin-left: 390px;
+        }
+        
+        #Heart2{
+            margin-left: 380px;
+        }
+
+        #AddOn{
+            width: 98%;
+        }
+
+        .heading-container {
+            display: flex;
+            margin-bottom: 20px; 
+        }
+
+        .Heading {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            font-size: 28px;
+        }
+
+        .Heading:hover{
+            cursor: pointer;
+            border: 4px solid pink;
+            color: yellowgreen;
+        }
+
+        #Heading1{
+            margin-left: 30px;
+        }
+
+        #Heading2{
+            margin-left: 950px;
+        }
+
+        #Text1, #Text2, #listitems{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .content-container {
+            width: 100%;
+        }
+        
+        #text{
+            text-align: center;
+            font-size: 40px;
+            padding-left: 30px;
+            background-color: aquamarine;
+            width: 700px;
+            margin-left: 380px;
+            margin-top: 50px;
+        }
+        
+        form{
+            margin-left: 100px;
+        }
+
+        #Part3{
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
+
+        .input_container{
+            margin-top: 15px;
+        }
+        
+        .input_images{
+            margin-top: 20px;
+            height: 400px;
+            width: auto;
+        }
+
+        label{
+            font-size: 30px;
+        }
+        
+        input{
+            font-size: 25px;
+            border: none;
+            width: 350px;
+            color: #23B5D3;
+        }
+
+        #FemaleImage{
+            margin-left: 300px;
+        }
+        
+        #Part4{
+            display: block;
+            text-align: center;
+        }
+        
+        button{
+            background-color: pink;
+            width: 120px;
+            height: 50px;
+            font-size: 30px;
+        }
+        
+        #LastPart{
+            display: flex;
+            background-color: pink;
+            margin-top: 20px;
+            height: 115px;
+        }
+        
+        #Heart4{
+            margin-left: 83%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="FirstPart">
+        <div class="HeartContainer" id="Heart1">
+            <img src="{{ url_for('static', filename='images/HeartShape.png') }}" alt="Beating Heart" class="heart">
+        </div>
+        <p id="Heading">Love Calculator</p>
+        <div class="HeartContainer" id="Heart2">
+            <img src="{{ url_for('static', filename='images/HeartShape.png') }}" alt="Beating Heart" class="heart">
+        </div>
+    </div>
+
+    <div id="AddOn">
+        <div class="heading-container">
+            <h1 class="Heading" id="Heading1">Definitions of Love</h1>
+            <h1 class="Heading" id="Heading2">Approaching Love</h1>
+        </div>
+    
+        <div id="Text1" class="content-container hidden">
+            <p>Love is a mix of emotions and a strong connection that goes beyond words. It's something everyone experiences, but it feels different for each person. Love influences our lives, our relationships, and how we see the world. Here's what love means:</p>
+            <p>Love is like a dance between hearts, a force that pulls people together. It doesn't always make sense, but it's the most natural feeling we have. It's the comfort of a shared smile, the safety in being vulnerable, and the courage to say, "You are important."</p>
+            <p>Love comes in different forms: the intense feelings of romantic love, the strong bonds of friendship, and the protective love of family. It's holding hands during sunsets and laughing over shared jokes. It's missing someone when they're not around and feeling joy when reunited.</p>
+            <p>But love isn't always easy. It also involves challenges—arguments, tears, and forgiveness. It's choosing to stay even when leaving would be easier. It's about compromise, healing, and promising to face life's difficulties together.</p>
+            <p>In love, we see ourselves in others—their flaws, strengths, dreams, and fears. Love is accepting someone even when they're not perfect and being patient when times are tough.</p>
+            <p>Ultimately, love is about actions. It's the small things—making a cup of tea, leaving surprise notes, and sharing responsibilities. It's also the big things—saying "I do" at a wedding and making sacrifices for someone else's happiness.</p>
+        </div>
+    
+        <div id="Text2" class="content-container hidden">
+            <p>Approaching love is like walking a fine line—a careful balance between being open and protecting yourself. It's a cautious step toward someone's heart, driven by curiosity and hope. Here's how we approach this mysterious feeling:</p>
+            <ol id="listitems" type="1">
+                <li>Openness: To approach love, we start with an open heart. We let down our defenses and allow someone to see who we really are, imperfections and all. It's about taking the risk of being rejected because being vulnerable is how we connect.</li>
+                <li>Curiosity: We show interest. We ask questions, listen, and learn about the other person—their unique traits, passions, and past experiences. Curiosity helps turn strangers into people we care about.</li>
+                <li>Courage: Approaching love takes courage—the bravery to say hello, share our stories, and express our feelings. It's like stepping onto a tightrope, heart racing, and hoping everything will turn out okay.</li>
+                <li>Patience: Love doesn't always happen suddenly. Sometimes it grows slowly, as we gradually realize how much someone means to us. Patience allows love to develop naturally.</li>
+                <li>Respect: Approaching love means respecting boundaries. It's knowing that consent is important, not everyone will feel the same way, and rejection doesn't define our worth.</li>
+                <li>Authenticity: We approach love by being our true selves. There's no need for pretense—authenticity is what makes love flourish, not the masks we wear to impress others.</li>
+                <li>In the end, approaching love is an art—a careful dance of timing, vulnerability, and hope. Whether it leads to something lasting or just a brief moment, the journey is always worthwhile.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="SecondPart">
+        <p id="text">Find Love% by Partner name</p>
+    </div>
+
+    <form action="/result" method="post">
+        <div id="Part3">
+            <div class="input_container" id="MalePart">
+                <label>Enter Partner 1 name :- </label>
+                <input type="text" placeholder="Enter your name" required name="Partner1">
+                <div>
+                    <img src="{{ url_for('static', filename='images/Men-Image.jpg') }}" alt="Male" class="input_images">
+                </div>
+            </div>
+            <div class="input_container" id="FemalePart">
+                <label>Enter Partner 2 name :- </label>
+                <input type="text" placeholder="Enter your Partner name" required name="Partner2">
+                <div>
+                    <img src="{{ url_for('static', filename='images/Women Image.jpeg') }}" alt="Female" class="input_images" id="FemaleImage">
+                </div>
+            </div>
+        </div>
+        <div id="Part4">
+            <center>
+                <button type="submit">Go</button>
+            </center>
+        </div>
+    </form>
+    <div id="LastPart">
+        <div class="HeartContainer" id="Heart3">
+            <img src="{{ url_for('static', filename='images/HeartShape.png') }}" alt="Beating Heart" class="heart">
+        </div>
+        <div class="HeartContainer" id="Heart4">
+            <img src="{{ url_for('static', filename='images/HeartShape.png') }}" alt="Beating Heart" class="heart">
+        </div>
+    </div>
+
+
+<script>
+    document.getElementById("Heading1").onclick = function() {
+        var text1 = document.getElementById("Text1");
+        var text2 = document.getElementById("Text2");
+
+        if (!text2.classList.contains("hidden")) {
+            text2.classList.add("hidden");
+        }
+        text1.classList.toggle("hidden");
+    }
+
+    document.getElementById("Heading2").onclick = function() {
+        var text1 = document.getElementById("Text1");
+        var text2 = document.getElementById("Text2");
+
+        if (!text1.classList.contains("hidden")) {
+            text1.classList.add("hidden");
+        }
+        text2.classList.toggle("hidden");
+    }
+</script>
+</body>
+</html>
